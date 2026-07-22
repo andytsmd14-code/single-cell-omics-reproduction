@@ -60,6 +60,14 @@ pip install pandas openpyxl scipy matplotlib
 | `11_clean_adrd_reference.py` | `ADRD_disease_demographics_wide.csv` | `adrd_sex_reference_clean.csv`, `adrd_ancestry_reference_clean.csv` |
 | `12_psychad_figures.py` | `psychad_clean.csv`, `adrd_sex_reference_clean.csv`, `adrd_ancestry_reference_clean.csv` | **`figure3_reproduction.png`** (4-panel A/B/C/D) + chi-square test CSV |
 
+### Part 5 — Reproduction accuracy check (our values vs. paper's reported values)
+
+| Script | Input | Output |
+|---|---|---|
+| `13_compare_with_paper.py` | `hca_clean.csv`, `htan_clean.csv`, `psychad_clean.csv` | `hca_vs_paper_comparison.csv`, `htan_vs_paper_comparison.csv`, `psychad_vs_paper_comparison.csv` |
+
+This script checks specific percentages and sample sizes quoted in the paper's main text against our own reproduced values, and labels each as Exact / Close / Gap / Large gap. It requires Parts 1, 2, and 4 to have been run first (needs `hca_clean.csv`, `htan_clean.csv`, `psychad_clean.csv`).
+
 ### Suggested execution order (copy-paste)
 
 ```bash
@@ -82,6 +90,9 @@ python 07_htan_vs_taiwan.py
 python 10_clean_psychad.py
 python 11_clean_adrd_reference.py
 python 12_psychad_figures.py
+
+# Part 5 — Reproduction accuracy check (run after Parts 1, 2, and 4)
+python 13_compare_with_paper.py
 ```
 
 ## Key findings from the reproduction
@@ -132,15 +143,42 @@ python 12_psychad_figures.py
   obtained in time via the U.S. Census Bureau API (which requires a
   personal API key to query). This is documented as an open reproduction
   gap rather than resolved.
+- **HTAN Skin cancer sample count**: our reproduction finds only 44 records
+  tagged "Skin" in the raw `Tissue Site` column of the Zenodo-hosted
+  `HTAN_Data_Final.xlsx`, versus 79 reported in the paper's text, with no
+  alternative labels (e.g., "Melanoma") accounting for the remaining
+  records. This may reflect a dataset version difference between what we
+  downloaded and what the original authors analyzed.
+- **HTAN Blood Tumors ancestry composition**: our computed African ancestry
+  share for the paper-defined "Blood Tumors" category (13.8%) differs
+  substantially from the paper's reported 27.3%. Since Blood Tumors is a
+  merge of several raw hematologic malignancy labels (per the paper's
+  Methods), our merge rule may not exactly replicate which raw categories
+  the original authors included.
+- A full, automated comparison of every value above against the paper's
+  quoted numbers is available in `13_compare_with_paper.py` and its output
+  CSVs (`hca_vs_paper_comparison.csv`, `htan_vs_paper_comparison.csv`,
+  `psychad_vs_paper_comparison.csv`).
+
+## Additional materials
+
+- **`overview.ipynb`** — a narrative walkthrough of all four parts, with
+  every figure embedded inline alongside plain-language explanations and
+  the statistical results tables. Renders directly on GitHub.
+- **`statistical_tables.docx`** — a Word document compiling all chi-square
+  test results and paper-comparison tables, formatted for direct use in a
+  written report.
 
 ## Repository structure
 
 ```
-01-12_*.py             analysis scripts, run in numeric order (see above)
-*_clean.csv             cleaned intermediate datasets produced by the scripts
-*_reference_clean*.csv  reference population datasets (SEER, Taiwan, ADRD)
-figure*.png             reproduced figures
-*_chisq.csv             chi-square test results
+scripts/                 01-13 analysis scripts, run in numeric order (see above)
+data/                     raw input datasets (HCA, HTAN, SEER, Taiwan, PsychAD, ADRD)
+outputs/                  cleaned intermediate datasets, reference tables, chi-square
+                          results, and paper-comparison CSVs produced by the scripts
+figures/                  reproduced figures (.png)
+overview.ipynb            narrative overview with embedded figures and tables
+statistical_tables.docx    all results tables, formatted for a written report
 ```
 
 ## Author's note
