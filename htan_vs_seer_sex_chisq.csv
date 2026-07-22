@@ -1,0 +1,12 @@
+cancer_type,n,chi2,p_value
+Blood Tumors,55,3.64,5.65e-02
+Bones,11,1.94,1.64e-01
+Brain,16,0.43,5.13e-01
+Breast,993,N/A,N/A
+Cervix,19,N/A,N/A
+Colorectal,151,2.85,9.16e-02
+Liver,25,12.33,4.46e-04
+Lung,199,1.28,2.58e-01
+Ovary,26,N/A,N/A
+Pancreas,47,0.42,5.17e-01
+Skin,43,0.56,4.54e-01

@@ -1,0 +1,11 @@
+cancer_type,n_htan,htan_male_pct,htan_female_pct,taiwan_male_pct,taiwan_female_pct,chi2,p_value
+Breast,993,0.0,100.0,N/A (sex-specific cancer),N/A (sex-specific cancer),N/A,N/A
+Lung,199,50.8,49.2,54.3,45.7,1.03,3.09e-01
+Colorectal,151,49.7,50.3,59.8,40.2,6.42,1.13e-02
+Skin,43,55.8,44.2,57.5,42.5,0.05,8.19e-01
+Liver,25,40.0,60.0,73.8,26.2,14.79,1.20e-04
+Pancreas,47,51.1,48.9,55.6,44.4,0.39,5.35e-01
+Ovary,26,0.0,100.0,N/A (sex-specific cancer),N/A (sex-specific cancer),N/A,N/A
+Cervix,19,0.0,100.0,N/A (sex-specific cancer),N/A (sex-specific cancer),N/A,N/A
+Blood Tumors,55,47.3,52.7,57.7,42.3,2.43,1.19e-01
+Brain,16,50.0,50.0,57.9,42.1,0.41,5.21e-01
