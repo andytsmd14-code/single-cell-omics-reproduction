@@ -32,7 +32,7 @@ GLOBAL_SEX_REF = {
 
 CAPTION_TEXT = (
     "Reproduced from Yang et al. (2026), Cell Genomics, Figure 1B/1D.\n"
-    "Reproduced by [Your Name/Group] using Python (pandas, matplotlib, scipy), [Date].\n"
+    "Reproduced by NYCU Yaen Tseng, ID:114101057 using Python (pandas, matplotlib, scipy), July 2026.\n"
     "Original data: Zenodo DOI 10.5281/zenodo.17161565."
 )
 

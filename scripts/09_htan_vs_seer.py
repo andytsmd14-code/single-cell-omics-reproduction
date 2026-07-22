@@ -28,11 +28,11 @@ SEX_COLORS = {"male": "#7ec8e3", "female": "#c9971e"}
 
 CAPTION_ANCESTRY = (
     "HTAN vs. SEER*Explorer 2018-2022 (actual reference data, Zenodo repository).\n"
-    "Reproduction of Figure 2A/2B. By [Your Name/Group], Python (pandas, matplotlib, scipy), [Date]."
+    "Reproduction of Figure 2A/2B. By NYCU Yaen Tseng, ID:114101057, Python (pandas, matplotlib, scipy), July 2026."
 )
 CAPTION_SEX = (
     "HTAN vs. SEER*Explorer 2018-2022 (actual reference data, Zenodo repository).\n"
-    "Reproduction of Figure 2C/2D. By [Your Name/Group], Python (pandas, matplotlib, scipy), [Date]."
+    "Reproduction of Figure 2C/2D. By NYCU Yaen Tseng, ID:114101057, Python (pandas, matplotlib, scipy), July 2026."
 )
 
 
@@ -106,7 +106,7 @@ def make_figure2(htan_ancestry_table, seer_ancestry_shares, ancestry_order,
     plt.tight_layout()
     caption = (
         "Reproduced from Yang et al. (2026), Cell Genomics, Figure 2A-D.\n"
-        "Reproduced by [Your Name/Group] using Python (pandas, matplotlib, scipy), [Date].\n"
+        "Reproduced by NYCU Yaen Tseng, ID:114101057 using Python (pandas, matplotlib, scipy), July 2026.\n"
         "HTAN data: Zenodo DOI 10.5281/zenodo.17161565. SEER reference: SEER*Explorer 2018-2022."
     )
     fig.text(0.5, -0.03, caption, wrap=True, horizontalalignment="center",

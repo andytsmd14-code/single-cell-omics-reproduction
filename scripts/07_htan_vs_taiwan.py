@@ -27,7 +27,7 @@ TAIWAN_FILE = "../outputs/taiwan_reference_clean_en.csv"
 CAPTION_TEXT = (
     "HTAN sex composition vs. Taiwan HPA national cancer registry (2022),\n"
     "reanalysis substituting Taiwan reference for the original SEER (US) reference.\n"
-    "Reproduced by [Your Name/Group] using Python (pandas, matplotlib, scipy), [Date].\n"
+    "Reproduced by NYCU Yaen Tseng, ID:114101057 using Python (pandas, matplotlib, scipy), July 2026.\n"
     "HTAN data: Zenodo DOI 10.5281/zenodo.17161565. Taiwan data: HPA Cancer Registry."
 )
 
