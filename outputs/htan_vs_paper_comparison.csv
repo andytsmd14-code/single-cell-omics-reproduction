@@ -1,0 +1,23 @@
+metric,our_value,paper_value,match
+Total ancestry-annotated n,1719.0,1719.0,Exact
+Overall % European,78.3,78.3,Exact
+Overall % African,17.3,17.3,Exact
+Overall % Asian,2.0,2.0,Exact
+Overall % Latino,2.0,2.0,Exact
+Breast n,993.0,993.0,Exact
+Colorectal n,151.0,151.0,Exact
+Pancreas n,47.0,47.0,Exact
+Ovary n,26.0,26.0,Exact
+Lung n,248.0,245.0,Close
+Skin n,44.0,79.0,Large gap
+"% European, Pancreas",93.6,93.6,Exact
+"% European, Ovary",92.3,92.3,Exact
+"% European, Lung",87.2,87.1,Exact
+"% European, Liver",91.3,88.9,Gap
+"% European, Skin",100.0,96.1,Gap
+"% African, Breast",25.3,25.3,Exact
+"% African, Cervix",21.1,21.1,Exact
+"% African, Blood Tumors",13.8,27.3,Large gap
+"% Female, Lung",49.2,49.0,Close
+"% Female, Liver",60.0,68.4,Large gap
+"% Female, Blood Tumors",52.7,58.3,Large gap

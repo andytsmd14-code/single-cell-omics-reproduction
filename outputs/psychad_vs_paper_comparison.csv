@@ -1,0 +1,27 @@
+metric,our_value,paper_value,match
+Alzheimer's Disease n,373.0,373.0,Exact
+Schizophrenia n,120.0,120.0,Exact
+Dementia with Lewy Bodies n,112.0,112.0,Exact
+Vascular Dementia n,85.0,85.0,Exact
+Bipolar Disorder n,55.0,55.0,Exact
+Tauopathies n,47.0,47.0,Exact
+Parkinson's Disease n,40.0,40.0,Exact
+Frontotemporal Dementia n,15.0,15.0,Exact
+Dementia (not otherwise specified) n,439.0,439.0,Exact
+AD case % European,72.0,71.6,Close
+AD case % African,17.3,17.2,Exact
+AD case % Latino,9.4,9.4,Exact
+"% European, Frontotemporal Dementia",86.7,86.7,Exact
+"% European, Bipolar Disorder",81.8,81.8,Exact
+"% European, Dementia with Lewy Bodies",78.4,77.7,Close
+"% African, Vascular Dementia",31.8,31.8,Exact
+"% African, Schizophrenia",26.7,26.7,Exact
+"% Latino, Tauopathies",20.5,19.2,Close
+"% Latino, Frontotemporal Dementia",13.3,13.3,Exact
+"% Asian, Parkinson's Disease",7.9,7.5,Close
+"% Asian, Bipolar Disorder",5.5,5.5,Exact
+"% Female, Alzheimer's Disease",64.6,64.6,Exact
+"% Female, Vascular Dementia",63.5,63.5,Exact
+"% Female, Schizophrenia",40.8,40.8,Exact
+"% Female, Bipolar Disorder",45.5,45.4,Exact
+"% Female, Frontotemporal Dementia",40.0,40.0,Exact

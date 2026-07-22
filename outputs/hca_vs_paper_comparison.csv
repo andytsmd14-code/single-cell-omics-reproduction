@@ -1,0 +1,26 @@
+metric,our_value,paper_value,match
+Immune tissue n,3704.0,3704.0,Exact
+Gut tissue n,883.0,883.0,Exact
+Skin tissue n,906.0,906.0,Exact
+Lung tissue n,743.0,743.0,Exact
+Kidney tissue n,601.0,601.0,Exact
+"% European, Skin tissue",83.2,82.9,Close
+"% European, Lung tissue",79.3,79.3,Exact
+"% European, Eye tissue",85.1,77.8,Large gap
+"% European, Musculoskeletal tissue",76.2,76.2,Exact
+"% European, Heart tissue",72.9,65.5,Large gap
+"% European, Immune tissue",49.0,46.5,Gap
+"% European, Gut tissue",40.2,39.2,Close
+"% Asian, Immune tissue",43.8,41.7,Gap
+"% Asian, Gut tissue",42.6,41.6,Close
+"% African, Development",45.2,45.2,Exact
+"% African, Kidney",29.6,25.3,Gap
+"% African, Breast",24.1,23.9,Close
+"% Latino, Liver",40.5,27.4,Large gap
+"% Latino, Adipose",21.4,21.4,Exact
+"% Latino, Reproduction",18.9,18.9,Exact
+"% Female, Breast tissue",89.0,89.0,Exact
+"% Female, Reproduction tissue",66.2,66.2,Exact
+"% Male, Immune tissue",54.3,54.3,Exact
+"% Male, Eye tissue",68.1,68.1,Exact
+"% Male, Lung tissue",56.1,56.1,Exact
