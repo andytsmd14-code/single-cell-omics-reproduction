@@ -18,8 +18,8 @@ Classification rules (per the paper's Methods section):
 
 import pandas as pd
 
-INPUT_FILE = "HCA_scrnaseq_data_final.xlsx"
-OUTPUT_FILE = "hca_clean.csv"
+INPUT_FILE = "../data/HCA_scrnaseq_data_final.xlsx"
+OUTPUT_FILE = "../outputs/hca_clean.csv"
 
 # The ethnicity column has this name in most worksheets; the Lung worksheet
 # uses a different column name, handled separately below.

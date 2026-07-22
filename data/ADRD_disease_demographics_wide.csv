@@ -1,0 +1,9 @@
+Disease,Female,Male,NH White, Black, Asian, Hispanic,Other
+AD/ADRD,0.628,0.372,2625631,310924,69994,188211,36135
+Bipolar disorder,0.491,0.509,,,,,
+Dementia with Lewy bodies,0.314,0.686,,,,,
+Frontotemporal dementia,0.475,0.525,,,,,
+Parkinson’s disease,0.400,0.600,,,,,
+Schizophrenia,0.413,0.587,,,,,
+Tauopathies,0.500,0.500,,,,,
+Vascular dementia,0.364,0.636,,,,,

@@ -1,0 +1,20 @@
+cancer_type,sex,seer_rate_per_100k
+Blood Tumors,female,33.1
+Blood Tumors,male,49.4
+Bones,female,0.9
+Bones,male,1.2
+Brain,female,5.2
+Brain,male,7.2
+Breast,female,130.8
+Cervix,female,7.7
+Colorectal,female,32.6
+Colorectal,male,42.3
+Liver,female,5.5
+Liver,male,13.9
+Lung,female,43.9
+Lung,male,53.1
+Ovary,female,10.3
+Pancreas,female,12.3
+Pancreas,male,15.5
+Skin,female,17.5
+Skin,male,27.8

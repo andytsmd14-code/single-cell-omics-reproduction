@@ -1,0 +1,56 @@
+cancer_type,ancestry,seer_rate_per_100k
+Blood Tumors,African,40.4
+Blood Tumors,Asian,26.200000000000003
+Blood Tumors,European,42.5
+Blood Tumors,Latino,36.0
+Blood Tumors,Other,34.2
+Bones,African,0.8
+Bones,Asian,0.9
+Bones,European,1.1
+Bones,Latino,1.0
+Bones,Other,0.9
+Brain,African,4.0
+Brain,Asian,4.0
+Brain,European,7.2
+Brain,Latino,5.2
+Brain,Other,4.8
+Breast,African,131.0
+Breast,Asian,114.3
+Breast,European,140.0
+Breast,Latino,104.0
+Breast,Other,116.7
+Cervix,African,8.4
+Cervix,Asian,6.0
+Cervix,European,6.9
+Cervix,Latino,10.0
+Cervix,Other,10.3
+Colorectal,African,42.5
+Colorectal,Asian,30.0
+Colorectal,European,37.6
+Colorectal,Latino,34.2
+Colorectal,Other,50.4
+Liver,African,10.0
+Liver,Asian,11.2
+Liver,European,7.6
+Liver,Latino,15.0
+Liver,Other,17.3
+Lung,African,52.0
+Lung,Asian,33.4
+Lung,European,54.2
+Lung,Latino,26.0
+Lung,Other,48.8
+Ovary,African,9.2
+Ovary,Asian,9.6
+Ovary,European,10.4
+Ovary,Latino,10.2
+Ovary,Other,11.4
+Pancreas,African,16.5
+Pancreas,Asian,10.4
+Pancreas,European,14.0
+Pancreas,Latino,12.6
+Pancreas,Other,12.5
+Skin,African,0.9
+Skin,Asian,1.2
+Skin,European,32.3
+Skin,Latino,4.6
+Skin,Other,9.1
