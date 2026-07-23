@@ -121,6 +121,22 @@ python 13_compare_with_paper.py
   not be extended to the Taiwan context — a genuine methodological
   limitation of cross-national reproduction, not an error in either dataset.
 
+## A note on the chi-square tables (Tables 3–6)
+
+The per-cancer-type and per-disease chi-square test results in Tables 3–6
+are computed independently by this reproduction, following the statistical
+method described in the paper's Methods section (chi-squared tests, with
+Benjamini-Hochberg FDR correction where applicable). **The paper's main
+text does not report per-cancer-type or per-disease χ²/p-values
+individually** — it only gives aggregate statements (e.g., HCA ancestry:
+p < 2e-16 overall) and a handful of specific descriptive percentages
+(which *are* compared directly against the paper's text in Tables 2b, 4b,
+and 6b — see `13_compare_with_paper.py`). As such, Tables 3–6 cannot be
+validated number-for-number against the paper; they represent this
+project's own statistical reanalysis of the reproduced data, using the
+paper's stated methodology as a guide, not a reproduction of numbers the
+paper itself published.
+
 ## Known reproduction limitations
 
 - **HCA ancestry classification**: our classification rules for ambiguous
