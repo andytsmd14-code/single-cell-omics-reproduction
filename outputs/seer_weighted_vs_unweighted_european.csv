@@ -1,0 +1,12 @@
+cancer_type,unweighted_European_pct,weighted_European_pct,difference
+Blood Tumors,23.7,62.0,38.3
+Bones,23.4,62.2,38.8
+Brain,28.6,68.0,39.5
+Breast,23.1,62.5,39.4
+Cervix,16.6,51.2,34.6
+Colorectal,19.3,57.5,38.2
+Liver,12.4,43.9,31.5
+Lung,25.3,66.5,41.2
+Ovary,20.5,58.8,38.3
+Pancreas,21.2,58.9,37.7
+Skin,67.2,92.5,25.3
