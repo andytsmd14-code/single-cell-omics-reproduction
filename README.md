@@ -55,7 +55,7 @@ pip install pandas openpyxl scipy matplotlib
 |---|---|---|
 | `14_population_weighted_seer.py` | `seer_ancestry_clean.csv`, `htan_clean.csv`, `us_population_by_race_2020.csv` | `seer_weighted_vs_unweighted_european.csv`, `htan_vs_seer_weighted_chisq_comparison.csv` |
 
-**Supplementary to Part 2, not a replacement.** The paper's SEER ancestry-share formula (rate ÷ sum of rates) only equals true case composition if each ancestry group has similar US population size — untrue in practice (non-Hispanic White ≈57.8% of the US population). The paper itself flags the share as "a proxy... not general population composition" (Methods). This script re-weights by real 2020 Census population shares and re-runs the chi-square tests: **5 of 11 cancer types (the smaller-sample ones) flip from significant to non-significant; the 6 largest remain significant either way.** Doesn't apply to HCA (reference is already a population share) or PsychAD/ADRD (reference is raw case counts).
+**Supplementary to Part 2, not a replacement.** The paper's SEER ancestry-share formula (rate ÷ sum of rates) approximates true case composition most closely when each ancestry group has a similar US population size. In practice, population sizes differ substantially (non-Hispanic White ≈57.8% of the US population) — a point the paper itself flags, noting the share is "a proxy... not general population composition" (Methods). This script re-weights by real 2020 Census population shares and re-runs the chi-square tests: **5 of 11 cancer types (the smaller-sample ones) flip from significant to non-significant; the 6 largest remain significant either way.** Doesn't apply to HCA (reference is already a population share) or PsychAD/ADRD (reference is raw case counts).
 
 ### Part 3 — Reanalysis: HTAN vs Taiwan cancer registry (sex composition)
 
@@ -153,13 +153,15 @@ statements (e.g., p < 2e-16) and a handful of specific percentages (which
 `13_compare_with_paper.py`). So Tables 3–6 cannot be validated number-for-
 number against the paper; they're this project's own reanalysis.
 
-**They should also be read with caution.** Part 2b shows that for HTAN vs.
-SEER specifically, the "expected" values feeding these tests depend on an
-equal-population assumption that doesn't hold in practice — and when
-corrected, 5 of 11 cancer types' significance verdicts flip. So while
-Tables 3–6 are computed correctly given their inputs, the inputs themselves
-carry real uncertainty; treat the per-cancer significance calls as
-suggestive, not definitive, especially for smaller-sample cancer types.
+**A related nuance worth keeping in mind:** the paper itself notes that its
+SEER-based ancestry shares are "a proxy... not general population
+composition" (Methods). Part 2b explores this simplification further, and
+finds that for 5 of 11 cancer types (generally the smaller-sample ones),
+the significance verdict changes once real US population sizes are
+factored in — while the 6 largest cancer types are unaffected either way.
+This doesn't change the correctness of the calculation in Tables 3–6, but
+it's a useful reminder to read the per-cancer-type significance calls as
+one piece of evidence among several, rather than as standalone conclusions.
 
 ## Known reproduction limitations
 
