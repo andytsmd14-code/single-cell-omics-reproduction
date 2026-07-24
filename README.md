@@ -144,19 +144,22 @@ python 13_compare_with_paper.py
 
 ## A note on the chi-square tables (Tables 3–6)
 
-The per-cancer-type and per-disease chi-square test results in Tables 3–6
-are computed independently by this reproduction, following the statistical
-method described in the paper's Methods section (chi-squared tests, with
-Benjamini-Hochberg FDR correction where applicable). **The paper's main
-text does not report per-cancer-type or per-disease χ²/p-values
-individually** — it only gives aggregate statements (e.g., HCA ancestry:
-p < 2e-16 overall) and a handful of specific descriptive percentages
-(which *are* compared directly against the paper's text in Tables 2b, 4b,
-and 6b — see `13_compare_with_paper.py`). As such, Tables 3–6 cannot be
-validated number-for-number against the paper; they represent this
-project's own statistical reanalysis of the reproduced data, using the
-paper's stated methodology as a guide, not a reproduction of numbers the
-paper itself published.
+The per-cancer-type and per-disease chi-square results in Tables 3–6 are
+computed independently by this reproduction, following the method described
+in the paper's Methods (chi-squared test vs. a reference distribution). The
+paper's main text does not report these values itself — only aggregate
+statements (e.g., p < 2e-16) and a handful of specific percentages (which
+*are* checked against the paper's text in Tables 2b/4b/6b via
+`13_compare_with_paper.py`). So Tables 3–6 cannot be validated number-for-
+number against the paper; they're this project's own reanalysis.
+
+**They should also be read with caution.** Part 2b shows that for HTAN vs.
+SEER specifically, the "expected" values feeding these tests depend on an
+equal-population assumption that doesn't hold in practice — and when
+corrected, 5 of 11 cancer types' significance verdicts flip. So while
+Tables 3–6 are computed correctly given their inputs, the inputs themselves
+carry real uncertainty; treat the per-cancer significance calls as
+suggestive, not definitive, especially for smaller-sample cancer types.
 
 ## Known reproduction limitations
 
