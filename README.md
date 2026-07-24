@@ -8,9 +8,12 @@ Personal reproduction project based on:
 
 This repository reproduces the three main demographic-representation analyses
 from the paper (HCA, HTAN, and PsychAD, each compared against its respective
-reference population) using Python, and adds one reanalysis: substituting
-Taiwan's national cancer registry data for the paper's original US SEER
-reference in the HTAN sex-composition comparison.
+reference population) using Python, and adds two extensions: (1) a reanalysis
+substituting Taiwan's national cancer registry data for the paper's original
+US SEER reference in the HTAN sex-composition comparison, and (2) a
+sensitivity analysis (Part 2b) testing how much the paper's ancestry-share
+calculation depends on its implicit assumption of equal population size
+across ancestry groups.
 
 ## Data sources
 
@@ -52,11 +55,7 @@ pip install pandas openpyxl scipy matplotlib
 |---|---|---|
 | `14_population_weighted_seer.py` | `seer_ancestry_clean.csv`, `htan_clean.csv`, `us_population_by_race_2020.csv` | `seer_weighted_vs_unweighted_european.csv`, `htan_vs_seer_weighted_chisq_comparison.csv` |
 
-**This is a supplementary sensitivity analysis for Part 2, not a replacement for it.** The paper's method for converting SEER incidence rates into ancestry "shares" (`compositional_shares()` in `09_htan_vs_seer.py`) divides each group's rate by the sum of rates across groups. Mathematically, this is only equivalent to a true case-count composition if each ancestry group has a similar population size in the US — which is not the case (non-Hispanic White Americans are ~57.8% of the US population per the 2020 Census, far more than any other single group). The paper itself notes this share is "a proxy for the composition of incident cases, not general population composition" (Methods, "US cancer reference population").
-
-This script re-computes the ancestry shares with explicit US population weighting (`us_population_by_race_2020.csv`, sourced from the 2020 Decennial Census) and re-runs the chi-square tests. **Result: of the 11 cancer types, 5 (Blood Tumors, Bones, Brain, Cervix, Skin — generally the smaller-sample cancer types) flip from statistically significant to non-significant once population weighting is applied; the other 6 (Breast, Colorectal, Liver, Lung, Ovary, Pancreas) remain significant either way.** This suggests the European-overrepresentation finding is robust for major cancer types, but for smaller cancer types it may be partly attributable to the simplifying assumption in the share calculation rather than a true representation gap.
-
-Note: this population-weighting concern applies specifically to the HTAN vs. SEER comparison, because SEER's input is an incidence *rate* (which requires converting to population-weighted case counts). It does not apply to HCA (whose global reference is already a population share, not a rate) or to PsychAD vs. ADRD (whose reference is raw case counts, which already incorporate population size).
+**Supplementary to Part 2, not a replacement.** The paper's SEER ancestry-share formula (rate ÷ sum of rates) only equals true case composition if each ancestry group has similar US population size — untrue in practice (non-Hispanic White ≈57.8% of the US population). The paper itself flags the share as "a proxy... not general population composition" (Methods). This script re-weights by real 2020 Census population shares and re-runs the chi-square tests: **5 of 11 cancer types (the smaller-sample ones) flip from significant to non-significant; the 6 largest remain significant either way.** Doesn't apply to HCA (reference is already a population share) or PsychAD/ADRD (reference is raw case counts).
 
 ### Part 3 — Reanalysis: HTAN vs Taiwan cancer registry (sex composition)
 
