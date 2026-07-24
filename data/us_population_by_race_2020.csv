@@ -1,0 +1,6 @@
+ancestry,population_pct,source
+European,57.8,"U.S. Census Bureau, 2020 Decennial Census (Non-Hispanic White alone)"
+African,12.1,"U.S. Census Bureau, 2020 Decennial Census (Black or African American alone, share reported as constant ~12% across 2000-2020 by EPI analysis)"
+Asian,6.1,"U.S. Census Bureau, 2020 Decennial Census (Asian American and Pacific Islander, AAPI)"
+Latino,18.7,"U.S. Census Bureau, 2020 Decennial Census (Hispanic or Latino, any race)"
+Other,5.3,"Remainder: American Indian/Alaska Native (~0.7%) plus Two or More Races and other categories, computed as 100% minus the four groups above"
